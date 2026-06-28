@@ -165,6 +165,9 @@ class API(ABC):
             "Queue": "queue",
             "QueueProfile": "queue_profile",
             "QueueProfileEntry": "queue_profile_entry",
+            "CaptivePortalProfile": "captive_portal_profile",
+            "PortAccessRole": "port_access_role",
+            "PortAccessVlanGroup": "port_access_vlan_group",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
         }
