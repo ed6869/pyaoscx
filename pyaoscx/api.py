@@ -170,6 +170,9 @@ class API(ABC):
             "PortAccessVlanGroup": "port_access_vlan_group",
             "Class": "class",
             "ClassEntry": "class_entry",
+            "PortAccessGbp": "port_access_gbp",
+            "PortAccessAbp": "port_access_abp",
+            "PortAccessPolicy": "port_access_policy",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
         }
