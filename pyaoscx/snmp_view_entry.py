@@ -70,8 +70,23 @@ class SnmpViewEntry(PyaoscxModule):
             raise GenericOperationError(response.text, response.status_code)
         data = json.loads(response.text)
         entries = {}
-        for entry_uri in session.api.get_uri_from_data(data):
-            index, entry = cls.from_uri(session, parent_view, entry_uri)
+        if not data:
+            return entries
+        is_uri_map = all(
+            isinstance(v, str) and "snmp_view_entry/" in v
+            for v in data.values()
+        )
+        if is_uri_map:
+            for entry_uri in session.api.get_uri_from_data(data):
+                index, entry = cls.from_uri(session, parent_view, entry_uri)
+                entries[index] = entry
+        else:
+            # Some firmware returns the entry attributes inline instead of a
+            # reference map; build a materialized entry from them.
+            index = data.get("oid_tree")
+            entry = cls(session, index, parent_view)
+            utils.create_attrs(entry, data)
+            entry.materialized = True
             entries[index] = entry
         return entries
 
