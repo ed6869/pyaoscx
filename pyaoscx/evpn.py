@@ -18,7 +18,7 @@ class Evpn(PyaoscxModule):
     base_uri = "system/evpn"
     path = "system/evpn"
 
-    def __init__(self, session, **kwargs):
+    def __init__(self, session, uri=None, **kwargs):
         self.session = session
         # List used to determine attributes related to the EVPN configuration
         self.config_attrs = []
