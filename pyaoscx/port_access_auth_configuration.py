@@ -172,32 +172,48 @@ class PortAccessAuthConfiguration(PyaoscxModule):
     @PyaoscxModule.connected
     def create(self):
         """
-        The entry is created implicitly by the switch; materialize it and
-            apply the requested attributes with a PUT.
+        Create the entry with a POST, or update it if it already exists.
         """
         pending = utils.get_attrs(self, self.config_attrs)
+        try:
+            self.get()
+            exists = True
+        except GenericOperationError:
+            exists = False
+        if exists:
+            for key, value in pending.items():
+                setattr(self, key, value)
+                if key not in self.config_attrs:
+                    self.config_attrs.append(key)
+            return self.update()
+        config_data = dict(pending)
+        config_data["authentication_method"] = self.authentication_method
+        post_data = json.dumps(config_data)
+        try:
+            response = self.session.request(
+                "POST", self.base_uri, data=post_data
+            )
+        except Exception as e:
+            raise ResponseError("POST", e)
+        if not utils._response_ok(response, "POST"):
+            raise GenericOperationError(response.text, response.status_code)
+        logging.info("SUCCESS: Adding %s", self)
         self.get()
-        for key, value in pending.items():
-            setattr(self, key, value)
-            if key not in self.config_attrs:
-                self.config_attrs.append(key)
-        return self.update()
+        return True
 
     @PyaoscxModule.connected
     def delete(self):
         """
-        The entry cannot be removed; reset its writable attributes instead.
+        Delete the configuration entry.
         """
-        self.get()
-        empty = {key: None for key in self.config_attrs}
-        post_data = json.dumps(empty)
         try:
-            response = self.session.request("PUT", self.path, data=post_data)
+            response = self.session.request("DELETE", self.path)
         except Exception as e:
-            raise ResponseError("PUT", e)
-        if not utils._response_ok(response, "PUT"):
+            raise ResponseError("DELETE", e)
+        if not utils._response_ok(response, "DELETE"):
             raise GenericOperationError(response.text, response.status_code)
-        logging.info("SUCCESS: Resetting %s", self)
+        logging.info("SUCCESS: Deleting %s", self)
+        utils.delete_attrs(self, self.config_attrs)
 
     @classmethod
     def from_uri(cls, session, parent_interface, uri):
