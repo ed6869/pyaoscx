@@ -192,6 +192,8 @@ class API(ABC):
             "KeychainKey": "keychain_key",
             "NtpKey": "ntp_key",
             "NtpAssociation": "ntp_association",
+            "PbrActionList": "pbr_action_list",
+            "PbrActionListEntry": "pbr_action_list_entry",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
