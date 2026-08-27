@@ -216,6 +216,7 @@ class API(ABC):
             "EvpnVlanAwareBundle": "evpn_vlan_aware_bundle",
             "Mirror": "mirror",
             "MirrorEndpoint": "mirror_endpoint",
+            "RadiusConfigAttribute": "radius_config_attribute",
         }
         if name not in module_names:
             raise ParameterError(
