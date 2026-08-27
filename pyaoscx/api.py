@@ -186,6 +186,7 @@ class API(ABC):
             "ClientProbeProfileEntry": "client_probe_profile_entry",
             "Evpn": "evpn",
             "EvpnVlan": "evpn_vlan",
+            "EvpnVlanAwareBundle": "evpn_vlan_aware_bundle",
         }
         if name not in module_names:
             raise ParameterError(
