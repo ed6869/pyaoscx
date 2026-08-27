@@ -174,6 +174,8 @@ class API(ABC):
             "TacacsServer": "tacacs_server",
             "BgpAspathFilter": "bgp_aspath_filter",
             "BgpAspathFilterEntry": "bgp_aspath_filter_entry",
+            "BgpCommunityFilter": "bgp_community_filter",
+            "BgpCommunityFilterEntry": "bgp_community_filter_entry",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
