@@ -190,6 +190,8 @@ class API(ABC):
             "MkaPolicy": "mka_policy",
             "Keychain": "keychain",
             "KeychainKey": "keychain_key",
+            "NtpKey": "ntp_key",
+            "NtpAssociation": "ntp_association",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
