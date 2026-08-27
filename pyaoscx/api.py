@@ -228,6 +228,8 @@ class API(ABC):
             "SnmpView": "snmp_view",
             "SnmpViewEntry": "snmp_view_entry",
             "SnmpTrap": "snmp_trap",
+            "TrafficInsight": "traffic_insight",
+            "TrafficInsightMonitor": "traffic_insight_monitor",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
