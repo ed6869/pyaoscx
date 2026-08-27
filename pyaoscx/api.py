@@ -219,6 +219,8 @@ class API(ABC):
             "PortAccessPolicy": "port_access_policy",
             "PrefixList": "prefix_list",
             "PrefixListEntry": "prefix_list_entry",
+            "RouteMap": "route_map",
+            "RouteMapEntry": "route_map_entry",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
