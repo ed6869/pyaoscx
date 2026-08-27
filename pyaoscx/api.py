@@ -172,6 +172,8 @@ class API(ABC):
             "AaaServerGroup": "aaa_server_group",
             "RadiusServer": "radius_server",
             "TacacsServer": "tacacs_server",
+            "BgpAspathFilter": "bgp_aspath_filter",
+            "BgpAspathFilterEntry": "bgp_aspath_filter_entry",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
         }
