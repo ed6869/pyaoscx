@@ -176,6 +176,8 @@ class API(ABC):
             "BgpAspathFilterEntry": "bgp_aspath_filter_entry",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
+            "ClientProbeProfile": "client_probe_profile",
+            "ClientProbeProfileEntry": "client_probe_profile_entry",
         }
         if name not in module_names:
             raise ParameterError(
