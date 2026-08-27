@@ -1,2 +1,13 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+pyaoscx/api.py merge=union
+pyaoscx/session.py merge=union
+pyaoscx/interface.py merge=union
+pyaoscx/pyaoscx_module.py merge=union
+pyaoscx/utils/util.py merge=union
+pyaoscx/__init__.py merge=union
+pyaoscx/pyaoscx_factory.py merge=union
+pyaoscx/configuration.py merge=union
+pyaoscx/tunnel_endpoint.py merge=union
+pyaoscx/rest/v10_13/api.py merge=union
+pyaoscx/rest/v10_13/interface.py merge=union
+pyaoscx/rest/v10_16/api.py merge=union
+pyaoscx/rest/v10_16/interface.py merge=union
