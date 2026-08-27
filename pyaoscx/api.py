@@ -159,6 +159,7 @@ class API(ABC):
             "AaaAccountingAttributes": "aaa_accounting_attributes",
             "Aaa": "aaa",
             "AaaServerGroupPrio": "aaa_server_group_prio",
+            "AppRecognition": "app_recognition",
             "LLDPNeighbor": "lldp_neighbor",
             "Mac": "mac",
             "StaticMac": "static_mac",
