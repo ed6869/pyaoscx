@@ -14,6 +14,7 @@ class v10_13(API):
 
     def __init__(self):
         self.release_date = date(2023, 10, 31)
+        self.release_date = date(2023, 10, 27)
         self.version = "10.13"
         self.default_selector = "writable"
         self.default_depth = 1
@@ -32,6 +33,8 @@ class v10_13(API):
 
     def _create_ospf_area(self, module_class, session, index_id, **kwargs):
         if "other_config" not in kwargs:
+            # If user does not pass value for other_config provide default
+            # value, it's needed for correct OSPF Area creation
             kwargs["other_config"] = {
                 "stub_default_cost": 1,
                 "stub_metric_type": "metric_non_comparable",
