@@ -167,6 +167,8 @@ class API(ABC):
             "PortAccessAuthConfiguration": "port_access_auth_configuration",
             "PortAccessCdpGroup": "port_access_device_group",
             "PortAccessLldpGroup": "port_access_device_group",
+            "RadiusDynamicAuthorization": "radius_dynamic_authorization",
+            "RadiusDynamicAuthorizationClient": "radius_dynamic_authorization_client",
             "LLDPNeighbor": "lldp_neighbor",
             "Mac": "mac",
             "StaticMac": "static_mac",
