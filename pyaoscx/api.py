@@ -245,6 +245,7 @@ class API(ABC):
             "RadiusProxyProfile": "radius_proxy_profile",
             "User": "user",
             "Stp": "stp",
+            "SyslogRemote": "syslog_remote",
         }
         if name not in module_names:
             raise ParameterError(
