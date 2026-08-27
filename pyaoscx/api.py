@@ -221,6 +221,8 @@ class API(ABC):
             "PrefixListEntry": "prefix_list_entry",
             "RouteMap": "route_map",
             "RouteMapEntry": "route_map_entry",
+            "SFlow": "sflow",
+            "SFlowCollector": "sflow_collector",
             "TunnelEndpoint": "tunnel_endpoint",
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
