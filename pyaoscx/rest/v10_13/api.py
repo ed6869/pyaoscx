@@ -13,7 +13,6 @@ class v10_13(API):
     """
 
     def __init__(self):
-        self.release_date = date(2023, 10, 31)
         self.release_date = date(2023, 10, 27)
         self.version = "10.13"
         self.default_selector = "writable"
