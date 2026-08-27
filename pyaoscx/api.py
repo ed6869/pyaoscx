@@ -158,6 +158,7 @@ class API(ABC):
             "PoEInterface": "poe_interface",
             "AaaAccountingAttributes": "aaa_accounting_attributes",
             "Aaa": "aaa",
+            "AaaServerGroupPrio": "aaa_server_group_prio",
             "LLDPNeighbor": "lldp_neighbor",
             "Mac": "mac",
             "StaticMac": "static_mac",
