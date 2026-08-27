@@ -164,6 +164,7 @@ class API(ABC):
             "Dhcpv6SnoopingGuardPolicy": "dhcpv6_snooping_guard_policy",
             "Ipv6DestinationGuardPolicy": "ipv6_destination_guard_policy",
             "StaticIpBinding": "static_ip_binding",
+            "UdpBcastForwarderServer": "udp_bcast_forwarder_server",
             "ACL": "acl",
             "AclEntry": "acl_entry",
             "AggregateAddress": "aggregate_address",
