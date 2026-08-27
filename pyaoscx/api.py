@@ -219,6 +219,9 @@ class API(ABC):
             "Mirror": "mirror",
             "MirrorEndpoint": "mirror_endpoint",
             "RadiusConfigAttribute": "radius_config_attribute",
+            "RadiusDynauthProxyServer": "radius_dynauth_proxy_server",
+            "RadiusDynauthProxyClientGroup": "radius_dynauth_proxy_client_group",
+            "RadiusDynauthProxyProfile": "radius_dynauth_proxy_profile",
         }
         if name not in module_names:
             raise ParameterError(
