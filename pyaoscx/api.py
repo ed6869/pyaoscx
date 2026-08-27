@@ -184,6 +184,8 @@ class API(ABC):
             "Vni": "vni",
             "ClientProbeProfile": "client_probe_profile",
             "ClientProbeProfileEntry": "client_probe_profile_entry",
+            "Evpn": "evpn",
+            "EvpnVlan": "evpn_vlan",
         }
         if name not in module_names:
             raise ParameterError(
@@ -210,6 +212,8 @@ class API(ABC):
             )
         elif module == "Vsx":
             return self._create_vsx(module_class, session, **kwargs)
+        elif module == "Evpn":
+            return module_class(session, **kwargs)
         else:
             return module_class(session, index_id, **kwargs)
 
