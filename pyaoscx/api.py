@@ -165,6 +165,8 @@ class API(ABC):
             "AaaServerGroupPrio": "aaa_server_group_prio",
             "AppRecognition": "app_recognition",
             "PortAccessAuthConfiguration": "port_access_auth_configuration",
+            "PortAccessCdpGroup": "port_access_device_group",
+            "PortAccessLldpGroup": "port_access_device_group",
             "LLDPNeighbor": "lldp_neighbor",
             "Mac": "mac",
             "StaticMac": "static_mac",
